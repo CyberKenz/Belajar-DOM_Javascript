@@ -4,6 +4,7 @@ const result2 = document.getElementById('info-2');
 const imgComputer = document.querySelector('#img-computer')
 const pScore = document.getElementById('scorePlayer')
 const compScore = document.getElementById('scoreComputer')
+const switchTheme = document.querySelector('div#themeToggle')
 const pilihan = [
     {nama : 'Batu', url : 'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_640.png'},
     {nama : 'Gunting', url : 'https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296853_960_720.png'},
@@ -64,4 +65,15 @@ player.forEach((img, idx) => {
         getScore(computer, player)
         }, 1000);
     });
+});
+
+switchTheme.addEventListener('click', () => {
+    const isDark = document.body.classList.toggle('dark-theme');
+
+    if(isDark){
+        document.body.classList.add('text-white')
+    }else{
+        document.body.classList.remove('text-white')
+    }
+
 });

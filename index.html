@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <style>
+        .dark-theme{
+            background-color: #222;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -12,14 +18,15 @@
     <div class="w-full py-5 mx-auto text-center text-xl font-semibold" id="info"></div>
     <div class="w-full pb-5 mx-auto text-center text-xl font-semibold" id="info-2"></div>
 
-    <div id="container" class="h-82 w-[28rem] bg-zinc-800 rounded-2xl shadow-lg shadow-black mx-auto">
+    <div id="container" class="relative h-82 w-[28rem] bg-zinc-800 rounded-2xl shadow-lg shadow-black mb-20 mx-auto">
+        <div id="themeToggle" class="absolute w-10 h-10 right-0"><i class="fa-solid fa-moon text-2xl text-white p-2 hover:text-orange-400 active:translate-y-1 transition"></i></div>
         <h2 class="p-5 text-white font-bold text-start text-lg" id="scoreComputer"></h2>
-        <h2 class="text-center text-white font-semibold pb-6">Computer :</h2>
+        <h2 id="name" class="text-center text-white font-semibold pb-6">Computer :</h2>
         <div class="w-32 h-32 mx-auto">
             <img class="rounded-3xl shadow-xl shadow-black" id="img-computer" alt="Gambar Batu" src="https://cdn.pixabay.com/photo/2014/03/25/15/26/rock-paper-scissors-296854_640.png"/>
         </div>
         <h2 class="p-5 text-white font-bold text-start text-lg" id="scorePlayer"></h2>
-        <h2 class="text-center pt-10 text-white font-semibold">Player :</h2>
+        <h2 id="name" class="text-center pt-10 text-white font-semibold">Player :</h2>
         <div id="player" class="py-8 flex justify-center">
             <ul class="flex gap-4">
             <li class="w-32 h-32">
